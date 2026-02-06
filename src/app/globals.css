@@ -1,0 +1,37 @@
+/* 1. External Sanskrit Import */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700;900&display=swap');
+
+/* 2. Tailwind Core */
+@import "tailwindcss";
+
+/* 3. Custom Font Registrations */
+@font-face {
+  font-family: 'Bhavnagar';
+  /* Points to public/fonts/Bhavnagar Unicode.ttf */
+  src: url('/fonts/Bhavnagar Unicode.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Wonderbar';
+  src: local('Wonderbar 2.0'), local('Wonderbar-2.0'), local('Wonderbar');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 4. Tailwind v4 Theme Variables */
+@theme {
+  --font-wonderbar: "Wonderbar", sans-serif;
+  --font-sanskrit: "Noto Sans Devanagari", sans-serif;
+  --font-gujarati: "Bhavnagar", sans-serif;
+}
+
+/* 5. Force Utility Classes */
+@layer utilities {
+  .font-wonderbar { font-family: 'Wonderbar', sans-serif !important; }
+  .font-sanskrit { font-family: 'Noto Sans Devanagari', sans-serif !important; }
+  .font-gujarati { font-family: 'Bhavnagar', sans-serif !important; }
+}
